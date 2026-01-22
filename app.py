@@ -34,6 +34,6 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
-if name == "main":
+if __name__ == "main":
     app.run(host="0.0.0.0", port=5000) 
 
