@@ -13,7 +13,7 @@ scaler = joblib.load('scalar.joblib')
 def home():
     return "Flask app is running. Use /predict for predictions."
 
-@app.route('/predict', methods=['POST'])
+@app.route('https://machine-learning-model-5.onrender.com//predict', methods=['POST'])
 def predict():
     try:
         data = request.get_json(force=True)
