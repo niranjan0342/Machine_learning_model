@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import joblib
-import pandas as pd
+import pandas as pd    
+
 import numpy as np
 
 app = Flask(__name__)
@@ -13,7 +14,7 @@ scaler = joblib.load('scalar.joblib')
 def home():
     return "Flask app is running. Use /predict for predictions."
 
-@app.route('https://machine-learning-model-3.onrender.com/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
         data = request.get_json(force=True)
