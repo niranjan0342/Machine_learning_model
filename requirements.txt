@@ -1,4 +1,6 @@
 pandas
-Numpy
+numpy
 flask
 joblib
+scikit-learn
+
